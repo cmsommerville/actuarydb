@@ -26,4 +26,4 @@ jobs:
           aws-region: us-east-2
       - name: Copy files to S3 with the AWS CLI
         run: |
-          aws s3 sync ./out s3://actuarydb/
+          aws s3 sync ./out s3://www.actuarydb.com/
