@@ -1,4 +1,11 @@
+"use client";
+
 export default function Contact() {
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
     <section
       id="contact"
@@ -10,7 +17,10 @@ export default function Contact() {
           clipPath: "polygon(0 0, 100% 20%, 100% 100%, 0 100%)",
         }}
       ></div>
-      <form className="bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-700 shadow-t dark:shadow-primary-500 py-8 px-6 md:px-16 rounded-lg absolute z-10 -top-8 w-3/4 md:w-2/3 lg:w-1/2">
+      <form
+        className="bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-700 shadow-t dark:shadow-primary-500 py-8 px-6 md:px-16 rounded-lg absolute z-10 -top-8 w-3/4 md:w-2/3 lg:w-1/2"
+        onSubmit={handleFormSubmit}
+      >
         <div className="space-y-12">
           <div className="border-b border-slate-900/10 pb-12">
             <h2 className="text-3xl font-bold tracking-tight leading-7 text-slate-700 dark:text-slate-300">

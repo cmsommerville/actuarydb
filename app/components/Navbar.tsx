@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <nav
@@ -6,7 +8,7 @@ const Navbar = () => {
     >
       <div className="flex w-full flex-wrap items-center justify-between px-6">
         <div className="flex items-center">
-          <a
+          <Link
             className="text-primary dark:text-primary-400 flex items-center"
             href="#!"
           >
@@ -32,7 +34,7 @@ const Navbar = () => {
             >
               ActuaryDB
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center">
@@ -41,7 +43,7 @@ const Navbar = () => {
             data-te-navbar-nav-ref
           >
             <li data-te-nav-item-ref className="flex items-center">
-              <a
+              <Link
                 className="block py-2 pr-2 text-slate-300 transition duration-150 ease-in-out hover:text-primary-400 focus:text-slate-400 disabled:text-black/30 dark:text-slate-200 dark:hover:text-slate-300 dark:focus:text-slate-300 dark:disabled:text-slate-300/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-slate-300/80"
                 href="#about"
                 data-te-nav-link-ref
@@ -49,10 +51,10 @@ const Navbar = () => {
                 data-te-ripple-color="light"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="flex items-center" data-te-nav-item-ref>
-              <a
+              <Link
                 className="block py-2 pr-2 text-slate-300 transition duration-150 ease-in-out hover:text-primary-400 focus:text-slate-400 disabled:text-black/30 dark:text-slate-200 dark:hover:text-slate-300 dark:focus:text-slate-300 dark:disabled:text-slate-300/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-slate-300/80"
                 href="#contact"
                 data-te-nav-link-ref
@@ -60,7 +62,7 @@ const Navbar = () => {
                 data-te-ripple-color="light"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
