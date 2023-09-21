@@ -16,6 +16,16 @@ body {
     animation: gradient 15s ease infinite;
 }
 
+.nosend {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
