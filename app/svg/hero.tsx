@@ -2,10 +2,10 @@ const Hero = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="550"
+      // height="550"
       preserveAspectRatio="none"
       viewBox="0 0 1920 880"
-      className="h-full bg-primary-800 dark:bg-slate-900"
+      className="h-132 md:h-96 min-h-screen bg-primary-800 dark:bg-primary-950"
     >
       <g transform="translate(960,440) scale(1,1) translate(-960,-440)">
         <linearGradient

@@ -13,10 +13,12 @@ const config: Config = {
         'erdiagram-dark': "url('/images/erdiagram-dark.png')",
         'erdiagram': "url('/images/erdiagram.png')",
         'grid-slate': "url('/images/grid.svg')", 
+        'grid-slate-dark': "url('/images/grid-dark.svg')", 
         'dot-slate': "url('/images/dot.svg')", 
       },
       boxShadow: {
         'tr': '10px -10px 20px -5px rgba(0,0,0,0.1)', 
+        't': '0px -5px 20px -5px rgba(0,0,0,0.1)', 
       }, 
       colors: {
         'primary': colors.indigo
@@ -25,6 +27,17 @@ const config: Config = {
         'hero': ['Quicksand']
       }, 
       height: {
+        '50vh': '50vh', 
+        '60vh': '60vh', 
+        '70vh': '70vh', 
+        '75vh': '75vh', 
+        '80vh': '80vh', 
+        '90vh': '90vh', 
+        '120': '32rem', 
+        '132': '36rem', 
+        '144': '40rem', 
+      }, 
+      minHeight: {
         '50vh': '50vh', 
         '60vh': '60vh', 
         '70vh': '70vh', 

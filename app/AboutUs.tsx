@@ -4,17 +4,17 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="bg-slate-100 dark:bg-slate-800 py-16 relative"
+      className="bg-slate-100 dark:bg-slate-900 py-16 relative dark"
     >
-      <div className="absolute inset-0 bg-grid-slate bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 pointer-none"></div>
+      <div className="absolute inset-0 bg-grid-slate bg-[bottom_1px_center] dark:bg-grid-slate-dark pointer-none"></div>
       <div className="relative container mx-auto flex flex-col items-center w-10/12 lg:w-7/12 mb-12">
-        <h2 className="mb-6 px-32 py-3 text-4xl font-bold text-slate-700 dark:text-slate-300 text-center">
+        <h2 className="mb-6 lg:px-32 py-3 text-4xl font-bold text-slate-700 dark:text-slate-300 text-center">
           What is{" "}
           <span className="text-primary-500 dark:text-primary-400">
             ActuaryDB?
           </span>
         </h2>
-        <div className="text-slate-500 space-y-4">
+        <div className="text-slate-500 space-y-4 dark:text-slate-400">
           <p className="">
             We at ActuaryDB are an actuarial consulting company that helps
             organizations deliver actuarial-focused data warehousing solutions
@@ -22,7 +22,7 @@ const AboutUs = () => {
           </p>
           <ul className="space-y-4">
             <li className="flex items-start">
-              <span className="inline-block text-primary-500 mr-2">
+              <span className="inline-block text-primary-500 mr-2 dark:text-primary-400">
                 <QuestionMarkCircleIcon className="w-8 h-8" />
               </span>
               <span className="inline-block">
@@ -38,7 +38,7 @@ const AboutUs = () => {
               </span>
             </li>
             <li className="flex items-start">
-              <span className="inline-block text-primary-500 mr-2">
+              <span className="inline-block text-primary-500 mr-2 dark:text-primary-400">
                 <QuestionMarkCircleIcon className="w-8 h-8" />
               </span>
               <span className="inline-block">

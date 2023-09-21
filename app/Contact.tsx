@@ -2,18 +2,18 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full h-90vh min-h-[600px] py-12 flex justify-center relative"
+      className="w-full h-full min-h-[600px] pt-12 pb-24 flex justify-center relative  dark:bg-slate-800"
     >
       <div
-        className="absolute top-0 left-0 h-full w-full custom-animated-gradient "
+        className="absolute top-0 left-0 h-144 md:h-96 min-h-full w-full custom-animated-gradient"
         style={{
           clipPath: "polygon(0 0, 100% 20%, 100% 100%, 0 100%)",
         }}
       ></div>
-      <form className="bg-gradient-to-br from-slate-50 to-white shadow-tr py-8 px-16 rounded-lg absolute z-10 -top-8 w-3/4 md:w-2/3 lg:w-1/2">
+      <form className="bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-700 shadow-t dark:shadow-primary-500 py-8 px-6 md:px-16 rounded-lg absolute z-10 -top-8 w-3/4 md:w-2/3 lg:w-1/2">
         <div className="space-y-12">
           <div className="border-b border-slate-900/10 pb-12">
-            <h2 className="text-3xl font-bold tracking-tight leading-7 text-slate-700">
+            <h2 className="text-3xl font-bold tracking-tight leading-7 text-slate-700 dark:text-slate-300">
               Contact Us
             </h2>
 
@@ -21,7 +21,7 @@ export default function Contact() {
               <div className="col-span-6 lg:col-span-3">
                 <label
                   htmlFor="first"
-                  className="block text-sm font-medium leading-6 text-slate-800"
+                  className="block text-sm font-medium leading-6 text-slate-800 dark:text-slate-400"
                 >
                   First Name*
                 </label>
@@ -32,7 +32,7 @@ export default function Contact() {
                       name="first"
                       id="first"
                       autoComplete="given-name"
-                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6"
+                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6  dark:bg-transparent dark:placeholder:text-slate-400 dark:border-slate-500"
                       placeholder="Sally"
                     />
                   </div>
@@ -41,7 +41,7 @@ export default function Contact() {
               <div className="col-span-6 lg:col-span-3">
                 <label
                   htmlFor="last"
-                  className="block text-sm font-medium leading-6 text-slate-800"
+                  className="block text-sm font-medium leading-6 text-slate-800 dark:text-slate-400"
                 >
                   Last Name*
                 </label>
@@ -52,7 +52,7 @@ export default function Contact() {
                       name="last"
                       id="last"
                       autoComplete="family-name"
-                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6"
+                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6  dark:bg-transparent dark:placeholder:text-slate-400 dark:border-slate-500"
                       placeholder="Dunbar"
                     />
                   </div>
@@ -62,7 +62,7 @@ export default function Contact() {
               <div className="col-span-6 md:col-span-4">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-slate-800"
+                  className="block text-sm font-medium leading-6 text-slate-800 dark:text-slate-400"
                 >
                   Email*
                 </label>
@@ -73,7 +73,7 @@ export default function Contact() {
                       name="email"
                       id="email"
                       autoComplete="email"
-                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6"
+                      className="block flex-1 border border-slate-200 outline-none rounded-md py-1.5 pl-3 text-slate-800 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 focus:border-transparent sm:text-sm sm:leading-6  dark:bg-transparent dark:placeholder:text-slate-400 dark:border-slate-500"
                       placeholder="sally@actuarydb.com"
                     />
                   </div>
@@ -83,7 +83,7 @@ export default function Contact() {
               <div className="col-span-6">
                 <label
                   htmlFor="about"
-                  className="block text-sm font-medium leading-6 text-slate-800"
+                  className="block text-sm font-medium leading-6 text-slate-800 dark:text-slate-400"
                 >
                   About*
                 </label>
@@ -92,7 +92,7 @@ export default function Contact() {
                     id="about"
                     name="about"
                     rows={3}
-                    className="block w-full rounded-md border-0 py-1.5 text-slate-800 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-slate-800 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6 dark:bg-transparent dark:placeholder:text-slate-400 dark:ring-slate-500"
                     defaultValue={""}
                     placeholder="Tell us a little bit about your project."
                   />

@@ -3,12 +3,12 @@ import HeroBackground from "./svg/hero";
 
 export default function Hero() {
   return (
-    <section className="text-slate-300 ">
+    <section className="text-slate-300 h-132 md:h-96 min-h-screen">
       <span className="[&>svg]:absolute [&>svg]:-z-10 [&>svg]:m-auto [&>svg]:block [&>svg]:w-full">
         <HeroBackground />
         <Navbar />
       </span>
-      <div className="h-screen w-full flex justify-center items-center">
+      <div className="h-full w-full flex justify-center items-center">
         <div className="text-center dark:text-slate-100 w-11/12 sm:w-10/12 lg:w-8/12 xl:w-7/12">
           <div className="block rounded-lg bg-[hsla(0,0%,15%,0.7)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,15%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 saturate-200 backdrop-blur-xl">
             <h1 className="mt-6 mb-16 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl xl:text-7xl">
