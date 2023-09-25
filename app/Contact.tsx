@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
+import { AWS_API_GATEWAY_ROOT } from "./config";
 
 interface FormDataInterface {
   first_name: string;
   last_name: string;
   email: string;
-  about: string;
+  msg: string;
   zip_code?: string | undefined | null;
 }
 
@@ -13,7 +14,7 @@ const DEFAULT_FORM_DATA: FormDataInterface = {
   first_name: "",
   last_name: "",
   email: "",
-  about: "",
+  msg: "",
 };
 
 const validator = (form_data: FormDataInterface) => {
@@ -23,7 +24,7 @@ const validator = (form_data: FormDataInterface) => {
   if (!form_data.first_name) return;
   if (!form_data.last_name) return;
   if (!form_data.email) return;
-  if (!form_data.about) return;
+  if (!form_data.msg) return;
   return form_data;
 };
 
@@ -38,7 +39,25 @@ export default function Contact() {
   const handleFormSubmit = () => {
     const data = validator(formData);
     if (!data) return;
-    console.log(data);
+    fetch(`${AWS_API_GATEWAY_ROOT}/contact`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(String(err));
+      });
   };
 
   return (
@@ -134,21 +153,21 @@ export default function Contact() {
 
               <div className="col-span-6">
                 <label
-                  htmlFor="about"
+                  htmlFor="msg"
                   className="block text-sm font-medium leading-6 text-slate-800 dark:text-slate-400"
                 >
                   About*
                 </label>
                 <div className="mt-2">
                   <textarea
-                    id="about"
-                    name="about"
+                    id="msg"
+                    name="msg"
                     rows={3}
                     className="block w-full rounded-md border-0 py-1.5 text-slate-800 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6 dark:bg-transparent dark:placeholder:text-slate-400 dark:ring-slate-500"
                     defaultValue={""}
                     placeholder="Tell us a little bit about your project."
-                    onChange={(e) => formDataSetter("about", e.target.value)}
-                    value={formData.about}
+                    onChange={(e) => formDataSetter("msg", e.target.value)}
+                    value={formData.msg}
                   />
                 </div>
               </div>
