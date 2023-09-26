@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar";
-import HeroBackground from "./svg/hero";
+import Navbar from "./Navbar";
+import HeroBackground from "../svg/hero";
 import Link from "next/link";
 
 export default function Hero() {

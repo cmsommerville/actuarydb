@@ -1,7 +1,10 @@
-import Features from "./Features";
-import AboutUs from "./AboutUs";
-import Hero from "./Hero";
-import Contact from "./Contact";
+import dotenv from "dotenv";
+import Features from "./components/Features";
+import AboutUs from "./components/AboutUs";
+import Hero from "./components/Hero";
+import Contact from "./components/Contact";
+
+dotenv.config();
 
 export default function Home() {
   return (

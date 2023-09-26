@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { AWS_API_GATEWAY_ROOT } from "./config";
 
 interface FormDataInterface {
   first_name: string;
@@ -39,7 +38,7 @@ export default function Contact() {
   const handleFormSubmit = () => {
     const data = validator(formData);
     if (!data) return;
-    fetch(`${AWS_API_GATEWAY_ROOT}/contact`, {
+    fetch(`${process.env.NEXT_PUBLIC_AWS_API_GATEWAY_ROOT}/contact`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
